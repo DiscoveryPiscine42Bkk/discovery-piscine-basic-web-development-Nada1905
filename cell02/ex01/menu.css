@@ -1,0 +1,21 @@
+.food{
+    background-color: seashell;
+    width: 50px;
+    border: solid palevioletred;
+}
+.button:hover{
+    background-color: teal;
+}
+.food:hover{
+    background-color: mediumaquamarine;
+}
+.list{
+    display: none;
+}
+.menu{
+    display: inline-block;
+}
+.menu:hover .list{
+    display: flex;
+    flex-direction: column;
+}

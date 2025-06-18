@@ -1,0 +1,10 @@
+table{
+    width: 100vw;
+    height: 100vh;
+    border-collapse: collapse;
+}
+td{
+    width: 50vw;
+    height: 100vh;
+    border: solid white 1px;
+}
