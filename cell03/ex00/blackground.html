@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Background</title>
+    <link rel="stylesheet" href="backgroound.css">
+</head>
+<body>
+    <button id="change-bg-btn">Change Background Color</button>
+    <script>
+        function getRandomColor() {
+            // สุ่มค่าสีในรูปแบบ hex
+            return '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
+        }
+        document.getElementById('change-bg-btn').onclick = function() {
+            document.body.style.background = getRandomColor();
+        }
+    </script>
+</body>
+</html>

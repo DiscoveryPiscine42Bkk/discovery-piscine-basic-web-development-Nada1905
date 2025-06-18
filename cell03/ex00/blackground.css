@@ -1,0 +1,25 @@
+body {More actions
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.4s;
+}
+
+button {
+    padding: 16px 32px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background: #7c3aed;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.15);
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: #a78bfa;
+    color: #4b2996;
+}
