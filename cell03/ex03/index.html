@@ -1,0 +1,62 @@
+<!DOCTYPE html>More actions
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To do or not to do</title>
+    <style>
+        body {
+            background: #f7f7fa;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+        }
+        #new-btn {
+            margin: 32px 0 16px 0;
+            padding: 12px 32px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            border: none;
+            background: #7c3aed;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        #new-btn:hover {
+            background: #a78bfa;
+            color: #4b2996;
+        }
+        #ft_list {
+            width: 320px;
+            min-height: 80px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(124,58,237,0.08);
+            padding: 16px;
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 10px;
+        }
+        .todo {
+            background: #f3e8ff;More actions
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 1.1rem;
+            color: #4b2996;
+            cursor: pointer;
+            transition: background 0.2s;
+            word-break: break-word;
+        }
+        .todo:hover {
+            background: #e9d5ff;
+        }
+    </style>
+</head>
+<body>
+    <button id="new-btn">New</button>
+    <div id="ft_list"></div>
+    <script src="todo.js"></script>
+</body>
+</html>

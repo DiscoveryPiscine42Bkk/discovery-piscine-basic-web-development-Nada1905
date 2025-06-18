@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>It's over 9000 Calculator</title>
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f0f4f8;
+            font-family: Arial, sans-serif;
+        }
+        .calc-box {
+            background: #fff;
+            padding: 32px 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+        input[type="text"], select {
+            padding: 8px 12px;
+            font-size: 1.1rem;
+            border-radius: 6px;
+            border: 1px solid #bbb;
+            width: 80px;
+            text-align: center;
+        }
+        input[type="submit"] {
+            padding: 10px 24px;
+            font-size: 1.1rem;
+            border-radius: 6px;
+            border: none;
+            background: #7c3aed;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        input[type="submit"]:hover {
+            background: #a78bfa;
+            color: #4b2996;
+        }
+    </style>
+</head>
+<body>
+    <form class="calc-box" id="calcForm" autocomplete="off">
+        <input type="text" id="left" placeholder="Left" />
+        <select id="op">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" id="right" placeholder="Right" />
+        <input type="submit" value="Try me!" />
+    </form>
+    <script>
+        function isPositiveInt(val) {
+            return /^\d+$/.test(val) && Number(val) >= 0;
+        }
+
+        document.getElementById('calcForm').onsubmit = function(e) {
+            e.preventDefault();
+            const left = document.getElementById('left').value.trim();
+            const right = document.getElementById('right').value.trim();
+            const op = document.getElementById('op').value;
+
+            if (!isPositiveInt(left) || !isPositiveInt(right)) {
+                alert('Error :(');
+                return;
+            }
+
+            const l = Number(left);
+            const r = Number(right);
+
+            if ((op === '/' || op === '%') && r === 0) {
+                alert("It's over 9000!");
+                console.log("It's over 9000!");
+                return;
+            }
+
+            let result;
+            switch(op) {
+                case '+': result = l + r; break;
+                case '-': result = l - r; break;
+                case '*': result = l * r; break;
+                case '/': result = l / r; break;
+                case '%': result = l % r; break;
+            }
+            alert(result);
+            console.log(result);
+        };
+
+        setInterval(function() {
+            alert('Please, use me...');
+        }, 30000);
+    </script>
+</body>
+</html>
